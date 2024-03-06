@@ -15,7 +15,7 @@ function getWeather() {
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
-            const temperature = Math.round(data.main.temp - 273.15); // Convert temperature to Celsius
+            const temperature = Math.round(data.main.temp - 273.15); 
             const description = data.weather[0].description;
 
             const resultHTML = `<p>Current temperature in ${city}: ${temperature}°C</p>
